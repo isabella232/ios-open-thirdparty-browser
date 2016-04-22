@@ -4,18 +4,21 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    ThirdPartyBrowserBrave,
+    ThirdPartyBrowserFirefox
+} ThirdPartyBrowser;
+
 // This class is used to check if Firefox is installed in the system and
 // to open a URL in Firefox either with or without a callback URL.
-@interface OpenInThirdPartyBrowserControllerObjC : NSObject
+@interface OpenInThirdPartyBrowserControllerObjC : NSObject 
 
-// Returns a shared instance of the OpenInThirdPartyBrowserControllerObjC.
-+ (OpenInThirdPartyBrowserControllerObjC *)sharedInstance;
+-(instancetype)initWithBrowser:(ThirdPartyBrowser)browser NS_DESIGNATED_INITIALIZER;
 
 // Returns YES if Firefox is installed in the user's system.
 - (BOOL)isInstalled;
 
 // Opens a URL in Firefox.
-- (BOOL)OpenInThirdPartyBrowser:(NSURL *)url;
+- (BOOL)openInBrowser:(NSURL *)url;
 
-@property NSString *scheme;
 @end

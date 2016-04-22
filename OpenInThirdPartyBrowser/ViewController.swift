@@ -17,16 +17,18 @@ class ViewController: UIViewController {
         swiftButton.frame = CGRectMake(100, 100, 200, 50)
         swiftButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 150)
         swiftButton.backgroundColor = UIColor.orangeColor()
-        swiftButton.setTitle("Open with Swift", forState: UIControlState.Normal)
+        swiftButton.setTitle("Open in all browsers with Swift", forState: UIControlState.Normal)
         swiftButton.tintColor = UIColor.whiteColor()
+        swiftButton.titleLabel!.adjustsFontSizeToFitWidth = true
         swiftButton.addTarget(self, action: "buttonActionSwift:", forControlEvents: UIControlEvents.TouchUpInside)
 
         let objCButton = UIButton(type: UIButtonType.System)
         objCButton.frame = CGRectMake(100, 300, 200, 50)
         objCButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
         objCButton.backgroundColor = UIColor.blueColor()
-        objCButton.setTitle("Open with Obj-C", forState: UIControlState.Normal)
+        objCButton.setTitle("Open in all browsers with Obj-C", forState: UIControlState.Normal)
         objCButton.tintColor = UIColor.whiteColor()
+        objCButton.titleLabel!.adjustsFontSizeToFitWidth = true
         objCButton.addTarget(self, action: "buttonActionObjC:", forControlEvents: UIControlEvents.TouchUpInside)
 
         self.view.addSubview(myWebView)
@@ -34,17 +36,23 @@ class ViewController: UIViewController {
         self.view.addSubview(objCButton)
     }
 
+    // Obviously you wouldn't want to open in ALL browsers in your app, you would hide/show
+    // browser choices based on isInstalled() and have the user pick
     func buttonActionSwift(sender: UIButton!) {
-        let controller = OpenInThirdPartyBrowserControllerSwift()
-        if controller.isInstalled() {
-            controller.OpenInThirdPartyBrowser(url)
+        for browser in [ThirdPartyBrowser.Brave, ThirdPartyBrowser.Firefox] {
+            let controller = OpenInThirdPartyBrowserControllerSwift(browser: browser)
+            if controller.isInstalled() {
+                controller.openInBrowser(url)
+            }
         }
     }
 
     func buttonActionObjC(sender: UIButton!) {
-        let controller = OpenInThirdPartyBrowserControllerObjC()
-        if controller.isInstalled() {
-            controller.OpenInThirdPartyBrowser(url)
+        for browser in [ThirdPartyBrowserBrave, ThirdPartyBrowserFirefox] {
+            let controller = OpenInThirdPartyBrowserControllerObjC(browser: browser)
+            if controller.isInstalled() {
+                controller.openInBrowser(url)
+            }
         }
     }
 }

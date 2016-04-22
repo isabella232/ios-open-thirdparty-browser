@@ -7,17 +7,11 @@
 
 static NSString *const firefoxScheme = @"firefox:";
 
-@implementation OpenInThirdPartyBrowserControllerObjC
+@interface OpenInThirdPartyBrowserControllerObjC()
+@property NSString *scheme;
+@end
 
-// Creates a shared instance of the controller.
-+ (OpenInThirdPartyBrowserControllerObjC *)sharedInstance {
-    static OpenInThirdPartyBrowserControllerObjC *sharedInstance;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[self alloc] init];
-    });
-    return sharedInstance;
-}
+@implementation OpenInThirdPartyBrowserControllerObjC
 
 // Custom function that does complete percent escape for constructing the URL.
 static NSString *encodeByAddingPercentEscapes(NSString *string) {
@@ -30,22 +24,27 @@ static NSString *encodeByAddingPercentEscapes(NSString *string) {
     return encodedString;
 }
 
--(instancetype)init
+-(instancetype)initWithBrowser:(ThirdPartyBrowser)browser
 {
     if (self = [super init]) {
-        self.scheme = @"brave://";
+        switch (browser) {
+            case ThirdPartyBrowserBrave:
+                self.scheme = @"brave://";
+                break;
+            case ThirdPartyBrowserFirefox:
+                self.scheme = @"firefox://";
+                break;
+        }
     }
     return self;
 }
 
-// Checks if Firefox is installed.
 - (BOOL)isInstalled {
     NSURL *url = [NSURL URLWithString:self.scheme];
     return [[UIApplication sharedApplication] canOpenURL:url];
 }
 
-// Opens the URL in Firefox.
-- (BOOL)OpenInThirdPartyBrowser:(NSURL *)url {
+- (BOOL)openInBrowser:(NSURL *)url {
     if (![self isInstalled]) {
         return NO;
     }

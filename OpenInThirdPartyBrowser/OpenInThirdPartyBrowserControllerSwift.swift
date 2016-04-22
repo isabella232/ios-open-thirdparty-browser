@@ -5,15 +5,26 @@
 import Foundation
 import UIKit
 
+public enum ThirdPartyBrowser: String {
+    case Brave = "brave://"
+    case Firefox = "firefox://"
+}
+
 public class OpenInThirdPartyBrowserControllerSwift {
-    let scheme = "brave://"
+
+    let browserScheme: ThirdPartyBrowser
+
     var basicURL:NSURL {get {
-        return NSURL(string: scheme)!
+        return NSURL(string: browserScheme.rawValue)!
         }}
 
     // This would need to be changed if used from an extension… but you
     // can't open arbitrary URLs from an extension anyway.
     let app = UIApplication.sharedApplication()
+
+    public init(browser: ThirdPartyBrowser) {
+        self.browserScheme = browser
+    }
 
     private func encodeByAddingPercentEscapes(input: NSString) -> NSString {
         return CFURLCreateStringByAddingPercentEscapes(
@@ -28,7 +39,7 @@ public class OpenInThirdPartyBrowserControllerSwift {
         return app.canOpenURL(basicURL)
     }
 
-    public func OpenInThirdPartyBrowser(url: NSURL) ->  Bool {
+    public func openInBrowser(url: NSURL) ->  Bool {
         if !isInstalled() {
             return false
         }
@@ -36,7 +47,7 @@ public class OpenInThirdPartyBrowserControllerSwift {
         let scheme = url.scheme
         if scheme == "http" || scheme == "https" {
             let escaped = encodeByAddingPercentEscapes(url.absoluteString)
-            if let url = NSURL(string: "\(self.scheme)open-url?url=\(escaped)") {
+            if let url = NSURL(string: "\(browserScheme.rawValue)open-url?url=\(escaped)") {
                 return app.openURL(url)
             }
         }
