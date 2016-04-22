@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         swiftButton.frame = CGRectMake(100, 100, 200, 50)
         swiftButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 150)
         swiftButton.backgroundColor = UIColor.orangeColor()
-        swiftButton.setTitle("OpenInFirefox with Swift", forState: UIControlState.Normal)
+        swiftButton.setTitle("Open with Swift", forState: UIControlState.Normal)
         swiftButton.tintColor = UIColor.whiteColor()
         swiftButton.addTarget(self, action: "buttonActionSwift:", forControlEvents: UIControlEvents.TouchUpInside)
 
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         objCButton.frame = CGRectMake(100, 300, 200, 50)
         objCButton.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
         objCButton.backgroundColor = UIColor.blueColor()
-        objCButton.setTitle("OpenInFirefox with Obj-C", forState: UIControlState.Normal)
+        objCButton.setTitle("Open with Obj-C", forState: UIControlState.Normal)
         objCButton.tintColor = UIColor.whiteColor()
         objCButton.addTarget(self, action: "buttonActionObjC:", forControlEvents: UIControlEvents.TouchUpInside)
 
@@ -35,16 +35,16 @@ class ViewController: UIViewController {
     }
 
     func buttonActionSwift(sender: UIButton!) {
-        let controller = OpenInFirefoxControllerSwift()
-        if controller.isFirefoxInstalled() {
-            controller.openInFirefox(url)
+        let controller = OpenInThirdPartyBrowserControllerSwift()
+        if controller.isInstalled() {
+            controller.OpenInThirdPartyBrowser(url)
         }
     }
 
     func buttonActionObjC(sender: UIButton!) {
-        let controller = OpenInFirefoxControllerObjC()
-        if controller.isFirefoxInstalled() {
-            controller.openInFirefox(url)
+        let controller = OpenInThirdPartyBrowserControllerObjC()
+        if controller.isInstalled() {
+            controller.OpenInThirdPartyBrowser(url)
         }
     }
 }

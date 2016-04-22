@@ -6,15 +6,16 @@
 
 // This class is used to check if Firefox is installed in the system and
 // to open a URL in Firefox either with or without a callback URL.
-@interface OpenInFirefoxControllerObjC : NSObject
+@interface OpenInThirdPartyBrowserControllerObjC : NSObject
 
-// Returns a shared instance of the OpenInFirefoxControllerObjC.
-+ (OpenInFirefoxControllerObjC *)sharedInstance;
+// Returns a shared instance of the OpenInThirdPartyBrowserControllerObjC.
++ (OpenInThirdPartyBrowserControllerObjC *)sharedInstance;
 
 // Returns YES if Firefox is installed in the user's system.
-- (BOOL)isFirefoxInstalled;
+- (BOOL)isInstalled;
 
 // Opens a URL in Firefox.
-- (BOOL)openInFirefox:(NSURL *)url;
+- (BOOL)OpenInThirdPartyBrowser:(NSURL *)url;
 
+@property NSString *scheme;
 @end

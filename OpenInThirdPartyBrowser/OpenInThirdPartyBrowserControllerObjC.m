@@ -7,11 +7,11 @@
 
 static NSString *const firefoxScheme = @"firefox:";
 
-@implementation OpenInFirefoxControllerObjC
+@implementation OpenInThirdPartyBrowserControllerObjC
 
 // Creates a shared instance of the controller.
-+ (OpenInFirefoxControllerObjC *)sharedInstance {
-    static OpenInFirefoxControllerObjC *sharedInstance;
++ (OpenInThirdPartyBrowserControllerObjC *)sharedInstance {
+    static OpenInThirdPartyBrowserControllerObjC *sharedInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
@@ -30,15 +30,23 @@ static NSString *encodeByAddingPercentEscapes(NSString *string) {
     return encodedString;
 }
 
+-(instancetype)init
+{
+    if (self = [super init]) {
+        self.scheme = @"brave://";
+    }
+    return self;
+}
+
 // Checks if Firefox is installed.
-- (BOOL)isFirefoxInstalled {
-    NSURL *url = [NSURL URLWithString:firefoxScheme];
+- (BOOL)isInstalled {
+    NSURL *url = [NSURL URLWithString:self.scheme];
     return [[UIApplication sharedApplication] canOpenURL:url];
 }
 
 // Opens the URL in Firefox.
-- (BOOL)openInFirefox:(NSURL *)url {
-    if (![self isFirefoxInstalled]) {
+- (BOOL)OpenInThirdPartyBrowser:(NSURL *)url {
+    if (![self isInstalled]) {
         return NO;
     }
 
@@ -47,13 +55,12 @@ static NSString *encodeByAddingPercentEscapes(NSString *string) {
         return NO;
     }
 
-    NSString *urlString = [url absoluteString];
-    NSMutableString *firefoxURLString = [NSMutableString string];
-    [firefoxURLString appendFormat:@"%@//open-url?url=%@", firefoxScheme, encodeByAddingPercentEscapes(urlString)];
-    NSURL *firefoxURL = [NSURL URLWithString: firefoxURLString];
+    NSString *urlString = [NSString stringWithFormat:@"%@open-url?url=%@",
+                           self.scheme,
+                           encodeByAddingPercentEscapes([url absoluteString])];
 
     // Open the URL with Firefox.
-    return [[UIApplication sharedApplication] openURL:firefoxURL];
+    return [UIApplication.sharedApplication openURL:[NSURL URLWithString: urlString]];
 }
 
 @end
