@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7459FBED1B323CFE002DCC8A /* OpenInFirefoxControllerObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7459FBEC1B323CFE002DCC8A /* OpenInFirefoxControllerObjC.m */; };
+		7459FBED1B323CFE002DCC8A /* OpenInThirdPartyBrowserControllerObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7459FBEC1B323CFE002DCC8A /* OpenInThirdPartyBrowserControllerObjC.m */; };
 		74D20F841B2B789500A41894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D20F831B2B789500A41894 /* AppDelegate.swift */; };
 		74D20F861B2B789500A41894 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D20F851B2B789500A41894 /* ViewController.swift */; };
 		74D20F891B2B789500A41894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D20F871B2B789500A41894 /* Main.storyboard */; };
 		74D20F8B1B2B789500A41894 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D20F8A1B2B789500A41894 /* Images.xcassets */; };
 		74D20F8E1B2B789500A41894 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D20F8C1B2B789500A41894 /* LaunchScreen.xib */; };
-		74D20FC81B2B926500A41894 /* OpenInFirefoxControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D20FC71B2B926500A41894 /* OpenInFirefoxControllerSwift.swift */; };
+		74D20FC81B2B926500A41894 /* OpenInThirdPartyBrowserControllerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D20FC71B2B926500A41894 /* OpenInThirdPartyBrowserControllerSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7459FBEB1B323CFE002DCC8A /* OpenInFirefoxControllerObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenInFirefoxControllerObjC.h; sourceTree = "<group>"; };
-		7459FBEC1B323CFE002DCC8A /* OpenInFirefoxControllerObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenInFirefoxControllerObjC.m; sourceTree = "<group>"; };
-		746140F21B2F43F30011A8A6 /* OpenInFirefoxClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "OpenInFirefoxClient-Bridging-Header.h"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		74D20F7E1B2B789500A41894 /* OpenInFirefoxClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenInFirefoxClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7459FBEB1B323CFE002DCC8A /* OpenInThirdPartyBrowserControllerObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenInThirdPartyBrowserControllerObjC.h; sourceTree = "<group>"; };
+		7459FBEC1B323CFE002DCC8A /* OpenInThirdPartyBrowserControllerObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenInThirdPartyBrowserControllerObjC.m; sourceTree = "<group>"; };
+		746140F21B2F43F30011A8A6 /* OpenInThirdPartyBrowser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "OpenInThirdPartyBrowser-Bridging-Header.h"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		74D20F7E1B2B789500A41894 /* OpenInThirdPartyBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenInThirdPartyBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D20F821B2B789500A41894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D20F831B2B789500A41894 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74D20F851B2B789500A41894 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		74D20F881B2B789500A41894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74D20F8A1B2B789500A41894 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		74D20F8D1B2B789500A41894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		74D20FC71B2B926500A41894 /* OpenInFirefoxControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenInFirefoxControllerSwift.swift; sourceTree = "<group>"; };
+		74D20FC71B2B926500A41894 /* OpenInThirdPartyBrowserControllerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenInThirdPartyBrowserControllerSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		74D20F751B2B789500A41894 = {
 			isa = PBXGroup;
 			children = (
-				74D20F801B2B789500A41894 /* OpenInFirefoxClient */,
+				74D20F801B2B789500A41894 /* OpenInThirdPartyBrowser */,
 				74D20F7F1B2B789500A41894 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,22 +64,23 @@
 		74D20F7F1B2B789500A41894 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74D20F7E1B2B789500A41894 /* OpenInFirefoxClient.app */,
+				74D20F7E1B2B789500A41894 /* OpenInThirdPartyBrowser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		74D20F801B2B789500A41894 /* OpenInFirefoxClient */ = {
+		74D20F801B2B789500A41894 /* OpenInThirdPartyBrowser */ = {
 			isa = PBXGroup;
 			children = (
 				28D3923A1B5DC56D0016F0E5 /* Example App */,
-				74D20FC71B2B926500A41894 /* OpenInFirefoxControllerSwift.swift */,
-				7459FBEB1B323CFE002DCC8A /* OpenInFirefoxControllerObjC.h */,
-				7459FBEC1B323CFE002DCC8A /* OpenInFirefoxControllerObjC.m */,
-				746140F21B2F43F30011A8A6 /* OpenInFirefoxClient-Bridging-Header.h */,
+				74D20FC71B2B926500A41894 /* OpenInThirdPartyBrowserControllerSwift.swift */,
+				7459FBEB1B323CFE002DCC8A /* OpenInThirdPartyBrowserControllerObjC.h */,
+				7459FBEC1B323CFE002DCC8A /* OpenInThirdPartyBrowserControllerObjC.m */,
+				746140F21B2F43F30011A8A6 /* OpenInThirdPartyBrowser-Bridging-Header.h */,
 				74D20F811B2B789500A41894 /* Supporting Files */,
 			);
-			path = OpenInFirefoxClient;
+			name = OpenInThirdPartyBrowser;
+			path = OpenInThirdPartyBrowser;
 			sourceTree = "<group>";
 		};
 		74D20F811B2B789500A41894 /* Supporting Files */ = {
@@ -93,9 +94,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74D20F7D1B2B789500A41894 /* OpenInFirefoxClient */ = {
+		74D20F7D1B2B789500A41894 /* OpenInThirdPartyBrowser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74D20F9D1B2B789500A41894 /* Build configuration list for PBXNativeTarget "OpenInFirefoxClient" */;
+			buildConfigurationList = 74D20F9D1B2B789500A41894 /* Build configuration list for PBXNativeTarget "OpenInThirdPartyBrowser" */;
 			buildPhases = (
 				74D20F7A1B2B789500A41894 /* Sources */,
 				74D20F7B1B2B789500A41894 /* Frameworks */,
@@ -105,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = OpenInFirefoxClient;
-			productName = OpenInFirefoxClient;
-			productReference = 74D20F7E1B2B789500A41894 /* OpenInFirefoxClient.app */;
+			name = OpenInThirdPartyBrowser;
+			productName = OpenInThirdPartyBrowser;
+			productReference = 74D20F7E1B2B789500A41894 /* OpenInThirdPartyBrowser.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 74D20F791B2B789500A41894 /* Build configuration list for PBXProject "OpenInFirefoxClient" */;
+			buildConfigurationList = 74D20F791B2B789500A41894 /* Build configuration list for PBXProject "OpenInThirdPartyBrowser" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -138,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74D20F7D1B2B789500A41894 /* OpenInFirefoxClient */,
+				74D20F7D1B2B789500A41894 /* OpenInThirdPartyBrowser */,
 			);
 		};
 /* End PBXProject section */
@@ -162,8 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				74D20F861B2B789500A41894 /* ViewController.swift in Sources */,
-				74D20FC81B2B926500A41894 /* OpenInFirefoxControllerSwift.swift in Sources */,
-				7459FBED1B323CFE002DCC8A /* OpenInFirefoxControllerObjC.m in Sources */,
+				74D20FC81B2B926500A41894 /* OpenInThirdPartyBrowserControllerSwift.swift in Sources */,
+				7459FBED1B323CFE002DCC8A /* OpenInThirdPartyBrowserControllerObjC.m in Sources */,
 				74D20F841B2B789500A41894 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,10 +279,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = OpenInFirefoxClient/Info.plist;
+				INFOPLIST_FILE = OpenInThirdPartyBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "OpenInFirefoxClient-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenInThirdPartyBrowser-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -291,17 +292,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = OpenInFirefoxClient/Info.plist;
+				INFOPLIST_FILE = OpenInThirdPartyBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "OpenInFirefoxClient-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenInThirdPartyBrowser-Bridging-Header.h";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74D20F791B2B789500A41894 /* Build configuration list for PBXProject "OpenInFirefoxClient" */ = {
+		74D20F791B2B789500A41894 /* Build configuration list for PBXProject "OpenInThirdPartyBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74D20F9B1B2B789500A41894 /* Debug */,
@@ -310,7 +311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74D20F9D1B2B789500A41894 /* Build configuration list for PBXNativeTarget "OpenInFirefoxClient" */ = {
+		74D20F9D1B2B789500A41894 /* Build configuration list for PBXNativeTarget "OpenInThirdPartyBrowser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74D20F9E1B2B789500A41894 /* Debug */,
