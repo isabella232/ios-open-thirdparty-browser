@@ -2,7 +2,7 @@
 This open-source project provides support for opening links in third party browsers for iOS. There are classes (for Objective-C and Swift), along with a sample project that uses them, available for reference and use. 
 
 ### Using OpenInThirdPartyBrowserControllerSwift or OpenInThirdPartyBrowserControllerObjC to open links ###
-Thes classes provide methods that handle the making of custom URI schemes, checking if Firefox or Brave (or others if we want to add more) is installed on the device and opening the URL in the browser. We have provided Swift and Objective-C implementations of these classes to accommodate your language of choice.
+Thes classes provide methods that handle the making of custom URI schemes, checking if Firefox or Brave (or others if we want to add more) is installed on the device and opening the URL in the browser. Swift and Objective-C implementations of these classes are provided to accommodate your language of choice.
 
 ### Methods ###
 * `isInstalled`: returns true if  installed
